@@ -1,0 +1,18 @@
+service: bill-sender
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  role: arn:aws:iam::823839615515:role/samyerkes_lambda
+  environment:
+    SNSTOPIC: arn:aws:sns:us-east-1:823839615515:samyerkescom-low
+
+# you can overwrite defaults here
+#  stage: dev
+  region: us-east-1
+
+functions:
+  bill:
+    handler: handler.bill
+    events:
+      - schedule: rate(1 day)
