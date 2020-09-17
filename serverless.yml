@@ -15,4 +15,4 @@ functions:
   bill:
     handler: handler.bill
     events:
-      - schedule: cron(0 11 * * 6)
+      - schedule: cron(0 15 ? * 7 *)
