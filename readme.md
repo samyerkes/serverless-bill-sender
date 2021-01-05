@@ -5,5 +5,11 @@ The following will make a request to get the current month's AWS bill (month to 
 ## Local testing
 
 ```bash
-~ serverless invoke local -f bill
+$ serverless invoke local -f bill
+```
+
+## To deploy
+
+```bash
+$ serverless deploy
 ```
