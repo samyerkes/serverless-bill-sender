@@ -3,9 +3,9 @@ service: bill-sender
 provider:
   name: aws
   runtime: nodejs12.x
-  role: arn:aws:iam::823839615515:role/samyerkes_lambda
+  role: ${ssm:/prod/lambda/role}
   environment:
-    SNSTOPIC: arn:aws:sns:us-east-1:823839615515:samyerkescom-low
+    SNSTOPIC: ${ssm:/prod/serverless-bill-sender/sns-topic}
 
 # you can overwrite defaults here
 #  stage: dev

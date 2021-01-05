@@ -1,8 +1,8 @@
 'use strict';
 
 const AWS = require('aws-sdk');
-const CostExplorer = new AWS.CostExplorer({apiVersion: '2017-10-25', region: 'us-east-1'});
-const SNS = new AWS.SNS({apiVersion: '2010-03-31', region: 'us-east-1'});
+const CostExplorer = new AWS.CostExplorer({apiVersion: '2017-10-25'});
+const SNS = new AWS.SNS({apiVersion: '2010-03-31'});
 const SNSTopic =  process.env.SNSTOPIC;
 
 const moment = require('moment');
